@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, ShieldCheck, Zap, PhoneCall, PenTool, HandHeart } from 'lucide-react';
 

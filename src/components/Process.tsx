@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageSquare, MapPin, PenTool, CheckCircle, Zap, Power } from 'lucide-react';
 

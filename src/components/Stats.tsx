@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Clock, Building2, MapPin, Zap } from 'lucide-react';
 

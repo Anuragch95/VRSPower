@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-solar-yellow: #FDB813;
+  --color-solar-orange: #F37021;
+  --color-solar-green: #4CAF50;
+  --color-solar-dark: #1F2937;
+  --color-solar-light: #F9FAFB;
+
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 1; filter: brightness(1); }
+    50% { opacity: 0.8; filter: brightness(1.2); }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-solar-light text-solar-dark font-sans;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
+  }
+  
+  .glass-dark {
+    @apply bg-solar-dark/80 backdrop-blur-md border border-white/10;
+  }
+
+  .glow-yellow {
+    box-shadow: 0 0 20px rgba(253, 184, 19, 0.4);
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 20px rgba(243, 112, 33, 0.4);
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-solar-yellow to-solar-orange text-white px-8 py-3 rounded-full font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-solar-orange/30;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-solar-dark border-2 border-solar-yellow px-8 py-3 rounded-full font-bold transition-all duration-300 hover:bg-solar-yellow/10 hover:scale-105;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-6 text-center;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-gray-600 mb-12 text-center max-w-2xl mx-auto;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+  }
+}
